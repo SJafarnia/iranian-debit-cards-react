@@ -14,7 +14,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "tsc && vite build",
-    "tsup": "tsup src/index.ts --format cjs,esm --dts",
+    "tsup": "tsup",
     "semantic-release": "semantic-release"
   },
   "repository": {
