@@ -1,0 +1,59 @@
+{
+  "name": "iranian-debit-cards-react",
+  "version": "0.0.0-development",
+  "description": "iranian debit cards React component",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "readme.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "tsc && vite build",
+    "tsup": "tsup src/index.ts --format cjs,esm --dts",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SJafarnia/iranian-debit-cards-react.git"
+  },
+  "author": "Sadeq Jafarnia",
+  "license": "MIT",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.5",
+    "@storybook/addon-interactions": "^8.3.5",
+    "@storybook/addon-links": "^8.3.5",
+    "@storybook/addon-onboarding": "^8.3.5",
+    "@storybook/blocks": "^8.3.5",
+    "@storybook/react": "^8.3.5",
+    "@storybook/react-vite": "^8.3.5",
+    "@storybook/test": "^8.3.5",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "semantic-release": "^24.1.2",
+    "storybook": "^8.3.5",
+    "tslib": "^2.7.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.4"
+  },
+  "dependencies": {
+    "@persian-tools/persian-tools": "^3.5.2"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
