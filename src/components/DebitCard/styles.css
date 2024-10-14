@@ -631,18 +631,18 @@ video {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
-.max-w-\[320px\] {
-    max-width: 320px;
+.w-\[320px\] {
+    width: 320px;
 }
-.max-h-\[200px\] {
-    max-height: 200px;
+.h-\[200px\] {
+    height: 200px;
 }
 @media (min-width: 640px) {
   .sm\:max-w-\[420px\] {
         max-width: 420px;
     }
-  .sm\:max-h-\[275px\] {
-        max-height: 275px;
+  .sm\:h-\[275px\] {
+        height: 275px;
     }
   .sm\:px-6 {
     padding-left: 1.5rem;

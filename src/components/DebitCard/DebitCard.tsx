@@ -107,7 +107,7 @@ export const DebitCard: React.FC<MyComponentProps> = ({ changeHandler, card, use
     }, [cardNumber])
 
     return (
-        <div className="relative flex items-center justify-center max-w-[320px] sm:max-w-[420px] max-h-[200px] sm:max-h-[275px] rounded-md">
+        <div className="relative flex items-center justify-center w-[320px] sm:w-[420px] h-[200px] sm:h-[275px] rounded-md">
             <div className={`card-input-container flex flex-col z-50 shadow-lg text-sm w-full ${(changeHandler && !card && !bank) ? "pt-[4.5rem] sm:pt-[7.7rem]" : "pt-[5.5rem] sm:pt-36"} pb-8 sm:pb-10 px-4 sm:px-6 rounded-lg relative`} dir="ltr">
                 {
                     changeHandler
