@@ -641,18 +641,21 @@ video {
   .sm\:max-w-\[420px\] {
         max-width: 420px;
     }
-    .sm\:max-h-\[275px\] {
+  .sm\:max-h-\[275px\] {
         max-height: 275px;
     }
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .sm\pb-10 {
+  .sm\:pb-10 {
   padding-bottom: 2.5rem;
 }
   .sm\:pt-36 {
     padding-top: 9rem;
+  }
+  .sm\:pt-\[7\.7rem\] {
+    padding-top: 7.7rem;
   }
   .sm\:text-base {
     font-size: 1rem;
@@ -660,7 +663,7 @@ video {
   }
   .sm\:\[\&\>input\]\:w-\[80px\]>input {
         width: 80px;
-    }
+  }
 }
 
 
