@@ -638,31 +638,31 @@ video {
     height: 200px;
 }
 @media (min-width: 640px) {
-  .sm\:max-w-\[420px\] {
-        max-width: 420px;
+  .sm\:w-\[420px\] {
+        width: 420px !important;
     }
   .sm\:h-\[275px\] {
-        height: 275px;
+        height: 275px !important;
     }
   .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem  !important;
   }
   .sm\:pb-10 {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.5rem !important;
 }
   .sm\:pt-36 {
-    padding-top: 9rem;
+    padding-top: 9rem !important;
   }
   .sm\:pt-\[7\.7rem\] {
-    padding-top: 7.7rem;
+    padding-top: 7.7rem !important;
   }
   .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
   }
   .sm\:\[\&\>input\]\:w-\[80px\]>input {
-        width: 80px;
+        width: 80px !important;
   }
 }
 

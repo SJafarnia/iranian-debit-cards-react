@@ -11,13 +11,23 @@ interface CardNumberState {
     section4: string;
 }
 
-type MyComponentProps = {
+type DebitCardProps = {
     changeHandler?: (value: string) => void
     card?: string
     userName?: string
 }
 
-export const DebitCard: React.FC<MyComponentProps> = ({ changeHandler, card, userName }) => {
+/**
+ * DebitCard Component
+ *
+ * @param {{ changeHandler: (); card: string; userName: string; }} props
+ * @param {*} props.changeHandler: get input data from this callback function
+ * @param {*} props.card : use this to show a debit card, makes the input disabled
+ * @param {*} props.userName : name to show on card(optional)
+ * 
+ * @returns {*}
+ */
+export const DebitCard: React.FC<DebitCardProps> = ({ changeHandler, card, userName }) => {
 
     const [bank, setBank] = useState<{ name: string, logo: string, title: string }>()
     const [cardNumber, setCardNumber] = useState<CardNumberState>({
@@ -108,7 +118,7 @@ export const DebitCard: React.FC<MyComponentProps> = ({ changeHandler, card, use
 
     return (
         <div className="relative flex items-center justify-center w-[320px] sm:w-[420px] h-[200px] sm:h-[275px] rounded-md">
-            <div className={`card-input-container flex flex-col z-50 shadow-lg text-sm w-full ${(changeHandler && !card && !bank) ? "pt-[4.5rem] sm:pt-[7.7rem]" : "pt-[5.5rem] sm:pt-36"} pb-8 sm:pb-10 px-4 sm:px-6 rounded-lg relative`} dir="ltr">
+            <div className={`card-input-container flex flex-col z-50 shadow-lg text-sm w-full ${(changeHandler && !card && !bank) ? "pt-[4.5rem]" : "pt-[5.5rem] "} sm:pt-[7.7rem] pb-8 sm:pb-10 px-4 sm:px-6 rounded-lg relative`} dir="ltr">
                 {
                     changeHandler
                     && !card && !bank &&

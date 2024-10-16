@@ -89,3 +89,17 @@ const [cardNumber, setCardNumber] = useState()
     userName={"your user's name"} //optional
 />
 ```
+<br> 
+
+DebitCardSlider example:
+```
+import { DebitCardSlider } from "iranian-debit-cards-react";
+
+const [cardNumber, setCardNumber] = useState()
+
+<DebitCardSlider 
+    userCards={ [{ number: "6037991785431265" }]}
+    CardHandler={(value) => setCardNumber(value)} 
+    userName={"your user's name"} //optional
+/>
+```
