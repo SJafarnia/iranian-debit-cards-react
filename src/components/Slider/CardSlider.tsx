@@ -10,9 +10,7 @@ interface SwiperInstance<T> {
 }
 
 type DebitCardSliderProps = {
-    userCards: {
-        number: string;
-    }[] | undefined
+    userCards: string[] | undefined
     cardHandler: (value: string) => void
     userName?: string
 }
@@ -36,7 +34,7 @@ export const DebitCardSlider: React.FC<DebitCardSliderProps> = ({ userCards, car
         if (swiper.activeIndex == 0) {
             setActiveCard(cardNumber)
         } else {
-            setActiveCard(userCards && userCards[swiper.activeIndex - 1]?.number)
+            setActiveCard(userCards && userCards[swiper.activeIndex - 1])
         }
 
         return
@@ -54,13 +52,13 @@ export const DebitCardSlider: React.FC<DebitCardSliderProps> = ({ userCards, car
 
     return (
         <>
-            <Swiper parallax={true} slidesPerView={1} onSlideChange={(swiper) => slideHanlder(swiper)} navigation={true} modules={[Navigation]} className="mySwiper w-[320px] sm:w-[420px] h-[200px] sm:h-[275px] rounded-md" dir='ltr'>
+            <Swiper spaceBetween={30} parallax={true} slidesPerView={1} onSlideChange={(swiper) => slideHanlder(swiper)} navigation={true} modules={[Navigation]} className="mySwiper w-[320px] sm:w-[420px] h-[200px] sm:h-[275px] rounded-md" dir='ltr'>
                 <SwiperSlide className=''>
                     <DebitCard changeHandler={(value) => setCardNumber(value)} userName={userName} card={undefined} />
                 </SwiperSlide>
                 {userCards && userCards?.map((item) => (
                     <SwiperSlide className=''>
-                        <DebitCard key={item.number} card={`${item.number}`} changeHandler={undefined} userName={userName} />
+                        <DebitCard key={item} card={`${item}`} changeHandler={undefined} userName={userName} />
                     </SwiperSlide>
                 ))}
             </Swiper>
