@@ -56,9 +56,8 @@ npm i iranian-debit-cards-react
 A debit-card component to get card data
 
 ```
-import { DebitCard } from "iranian-debit-cards-react";
-// import styles if you don't have tailwindcss locally
-import "iranian-debit-cards-react/dist/styles.css";
+import { DebitCard } from "iranian-debit-cards-react"; 
+import "iranian-debit-cards-react/dist/styles.css"; // import styles if you don't have tailwindcss installed
 
 const [cardNumber, setCardNumber] = useState()
 
@@ -94,11 +93,24 @@ const [cardNumber, setCardNumber] = useState()
 DebitCardSlider example:
 ```
 import { DebitCardSlider } from "iranian-debit-cards-react";
+import "iranian-debit-cards-react/dist/styles.css"; // import styles if you don't have tailwindcss installed
 
-const [cardNumber, setCardNumber] = useState()
+const [cardNumber, setCardNumber] = useState() // check the validity of this card number and then save it as a card 
+const [activeCard, setActiveCard] = useState() // makes sure the selected card is one of the valid user's cards
+
+useEffect(() => {
+    const cardExists = userCards.filter((card) => card == cardNumber)[0]
+
+    if (cardExists) {
+        setActiveCard(cardNumber)
+    } else {
+        setActiveCard(undefined)
+    }
+}, [cardNumber])
+
 
 <DebitCardSlider 
-    userCards={ [{ number: "6037991785431265" }]}
+    userCards={ ["6037991785431265","6037991785432346"]}
     CardHandler={(value) => setCardNumber(value)} 
     userName={"your user's name"} //optional
 />
